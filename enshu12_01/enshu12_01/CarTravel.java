@@ -1,4 +1,4 @@
-package enshu12_01;
+package enshu12_01.enshu12_01;
 
 /*クラス名:CarTravel
  *概要:車の総走行距離を管理

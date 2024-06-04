@@ -1,4 +1,4 @@
-package enshu12_01;
+package enshu12_01.enshu12_01;
 
 //Scannerクラスをインポート
 import java.util.Scanner;

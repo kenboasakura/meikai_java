@@ -1,4 +1,4 @@
-package enshu12_01;
+package enshu12_01.enshu12_01;
 
 //Calendarクラスの静的インポート
 import static java.util.Calendar.*;
