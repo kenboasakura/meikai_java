@@ -1,9 +1,9 @@
 package MethodManagementPackage;
 
+//Scannerクラスのインポート
 import java.util.Scanner;
 
 public class inputRegularData {
-
 	//Scannerクラスを設定
 	static Scanner standardInput = new Scanner(System.in);
 	//先頭にある構成要素の場所を表す整数を定数化
@@ -40,14 +40,14 @@ public class inputRegularData {
 		return intputLong;
 	}
 
-	/*関数名:inputDouble
+	/*関数名:inputRegularDouble
 	 *概要:正の実数を入力させて返却するメソッド
 	 *引数:入力を促す文字列(String型)
 	 *戻り値:入力した実数(double型)
 	 *作成者:K.Asakura
 	 *作成日:2024/05/22
 	 */
-	static double inputDouble(String stringPromptEntry) {
+	static double inputRegularDouble(String stringPromptEntry) {
 		//実数を読み込むため変数を初期化して宣言
 		double inputDouble = 0;
 		//正の実数を入力させる
@@ -71,7 +71,7 @@ public class inputRegularData {
 	 *引数:入力を促す文字列(String型)
 	 *戻り値:入力した整数(int型)
 	 *作成者:K.Asakura
-	 *作成日:2024/05/22
+	 *作成日:2024/06/02
 	 */
 	static int inputRegularInteger(String stringPromptEntry) {
 		//整数を読み込むため変数を初期化して宣言
@@ -97,7 +97,7 @@ public class inputRegularData {
 	 *引数:入力を促す文字列(String型)
 	 *戻り値:入力した整数(int型)
 	 *作成者:K.Asakura
-	 *作成日:2024/05/22
+	 *作成日:2024/06/02
 	 */
 	static int inputInteger(String stringPromptEntry) {
 		//整数を読み込むため変数を初期化して宣言
@@ -117,6 +117,33 @@ public class inputRegularData {
 		} while (inputInteger < 0);
 		//読み込んだ整数を返却
 		return inputInteger;
+	}
+
+	/*関数名:inputdouble
+	 *概要:0以上の実数を入力させて返却するメソッド
+	 *引数:入力を促す文字列(String型)
+	 *戻り値:入力した実数(double型)
+	 *作成者:K.Asakura
+	 *作成日:2024/06/02
+	 */
+	static double inputdouble(String stringPromptEntry) {
+		//実数を読み込むため変数を初期化して宣言
+		double inputDouble = 0;
+		//0以上の整数を入力させる
+		do {
+			//受け取った入力を促す文字列を表示
+			System.out.print(stringPromptEntry);
+			//実数を読み込む
+			inputDouble = standardInput.nextInt();
+			//負の実数が入力された場合実行
+			if (inputDouble < 0) {
+				//0以上の実数の入力を促す
+				System.out.println("0以上の整数を入力して下さい");
+			}
+			//0以上の実数が入力されるまでループ
+		} while (inputDouble < 0);
+		//読み込んだ実数を返却
+		return inputDouble;
 	}
 
 	public static void main(String[] args) {
